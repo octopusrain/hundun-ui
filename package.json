@@ -1,0 +1,27 @@
+{
+  "name": "hundun-ui",
+  "version": "1.0.0",
+  "description": "混沌弹窗组件",
+  "main": "hd-confirm.js",
+  "scripts": {
+    "build": "rollup -c",
+    "publish": "sh .publish.sh",
+    "release": "npm run build && npm run publish"
+  },
+  "author": "octopusrain.cn",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-vue": "^5.1.7",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7"
+  }
+}
