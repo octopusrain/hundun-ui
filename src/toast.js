@@ -6,7 +6,7 @@ const toast = (props,Vue) => {
     // 兼容用户只想传入message 字符串
     notice = create(Toast, { message: props },Vue);
   } else {
-    notice = create(Toast, props,Vue);
+    notice = create(Toast, props, Vue);
   }
   // 移除
   setTimeout(() => {

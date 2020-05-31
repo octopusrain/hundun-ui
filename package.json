@@ -1,15 +1,30 @@
 {
-  "name": "hundun-ui",
-  "version": "1.0.0",
+  "name": "hundun-ui-dev",
+  "version": "1.0.2",
   "description": "混沌弹窗组件",
-  "main": "hd-confirm.js",
+  "main": "hd-ui.js",
   "scripts": {
     "build": "rollup -c",
-    "publish": "sh .publish.sh",
-    "release": "npm run build && npm run publish"
+    "release": "npm run build && sh .publish.sh"
   },
-  "author": "octopusrain.cn",
-  "license": "ISC",
+  "author": "zhangyu@hundun.cn",
+  "license": "MIT",
+  "files": [
+    "package.json",
+    "hd-ui.js",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octopusrain/hundun-ui.git"
+  },
+  "keywords": [
+    "hundun"
+  ],
+  "bugs": {
+    "url": "https://github.com/octopusrain/hundun-ui.git/issues"
+  },
+  "homepage": "https://github.com/octopusrain/hundun-ui.git#readme",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",

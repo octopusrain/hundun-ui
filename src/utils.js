@@ -1,4 +1,4 @@
-export default function create( component ,props,Vue ){
+export default function create( component, props, Vue ){
   // 获取vm实例
   const Crol = Vue.extend(component) // 获取vue构造函数
   const comp = new Crol({propsData:props}).$mount() // 得到vue实例 挂载 得到dom元素

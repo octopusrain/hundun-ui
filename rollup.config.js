@@ -8,7 +8,7 @@ import commonjs from 'rollup-plugin-commonjs' // 转化为commonjs规范
 export default {
   input: 'src/index.js',
   output: {
-    file: 'hd-confirm.js',
+    file: 'hd-ui.js',
     name:'HDConfirm',
     format: 'umd'
   },

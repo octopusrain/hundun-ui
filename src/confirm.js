@@ -12,7 +12,7 @@ export default {
         props.oncancel = () => {
           reject(false);
         };
-        return create(Confirm, props,Vue);
+        return create(Confirm, props, Vue);
       });
     }
   }
