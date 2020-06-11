@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'toast',
+  name: 'HDToast',
   props: {
     message: {
       type: String,

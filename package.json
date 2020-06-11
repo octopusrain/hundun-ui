@@ -1,6 +1,6 @@
 {
   "name": "hundun-ui-dev",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "混沌弹窗组件",
   "main": "hd-ui.js",
   "scripts": {
@@ -9,22 +9,22 @@
   },
   "author": "zhangyu@hundun.cn",
   "license": "MIT",
-  "files": [
-    "package.json",
-    "hd-ui.js",
-    "src"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/octopusrain/hundun-ui.git"
   },
   "keywords": [
-    "hundun"
+    "hundun",
+    "ui",
+    "pullrefresh"
   ],
   "bugs": {
     "url": "https://github.com/octopusrain/hundun-ui.git/issues"
   },
   "homepage": "https://github.com/octopusrain/hundun-ui.git#readme",
+  "peerDependencies": {
+    "minirefresh": "2.0.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
@@ -37,6 +37,8 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.7"
+    "@babel/polyfill": "^7.8.7",
+    "minirefresh": "2.0.2",
+    "async-validator": "3.3.0"
   }
 }

@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: 'HDConfirm',
   data() {
     return {
       showConfirm: true,
