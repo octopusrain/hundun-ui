@@ -23,6 +23,7 @@ const install = function(Vue, opts = {}) {
     Vue.component(component.name, component)
   })
   // TODO
+  // $toast,$confirm全局引用的情况
   // some theme there
   // Vue.prototype.$HUNDUNUI = {}
 }

@@ -1,5 +1,9 @@
 <template>
-  <div class="hd-fix-button" :style="{ color, backgroundColor: bgColor }">
+  <div
+    @click="$emit('click')"
+    class="hd-fix-button"
+    :style="{ color, backgroundColor: bgColor }"
+  >
     {{ text }}
   </div>
 </template>
