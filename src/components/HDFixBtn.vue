@@ -4,7 +4,7 @@
     class="hd-fix-button"
     :style="{ color, backgroundColor: bgColor }"
   >
-    {{ text }}
+    <slot></slot>
   </div>
 </template>
 
@@ -12,10 +12,6 @@
 export default {
   name: 'HDFixBtn',
   props: {
-    text: {
-      type: String,
-      required: true,
-    },
     bgColor: {
       type: String,
     },

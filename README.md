@@ -57,12 +57,12 @@ Vue.use(HDToast)
 Vue.use(HDConfirm)
 ```
 
-## 使用插件
+## 使用插件 示例代码
 
 ```
 <template>
   <main>
-  <HDScrollView @onpulldown="handlePullDown" @onpullup="handlePullUp">
+    <HDScrollView @onpulldown="handlePullDown" @onpullup="handlePullUp">
     <div class="info1" ref="info1">
       <p class="tit">个人基本信息</p>
       <HDForm
@@ -112,10 +112,14 @@ Vue.use(HDConfirm)
         </HDFormItem>
       </HDForm>
       <!-- 不生效，在scroll view中 -->
-      <!-- <HDFixButton text="登录"></HDFixButton> -->
+      <!-- <HDFixButton>登录</HDFixButton> -->
     </div>
-  </HDScrollView>
-  <HDFixButton text="登录"></HDFixButton>
+    </HDScrollView>
+    <HDFixBtn @click="login">
+      <p>登录</p>
+      <HDTips tips="邀请好友得颜值，上线500"></HDTips>
+    </HDFixBtn>
+    <HDMarquee :receiveList="receiveList"></HDMarquee>
   </main>
 </template>
 ```
@@ -123,19 +127,81 @@ Vue.use(HDConfirm)
 ```
 <script>
 export default {
+  data() {
+    return {
+      formFocus: false,
+      data: {
+        phone: '18618322994',
+        name: '',
+        birthday: '1980-01-01',
+        weixin: '',
+        sex: '',
+      },
+      rules: {
+        name: [{ required: true, message: '用户名不能为空' }],
+        phone: [{ required: true, message: '手机号不能为空' }],
+        sex: [{ required: true, message: '请选择性别' }],
+        birthday: [{ required: true, message: '出生日期不能为空' }],
+        weixin: [{ required: true, message: '微信号不能为空' }],
+      },
+      receiveList: [
+        {
+          avatars:
+            'http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJbE4CqHgp28Nq0uGxNQcLWuUXbdEbiaWpGkM4qe9mOcw3azbBNBVudSOG7QcQshVdQqFlqk5WhnWQ/132',
+          name: 'stacy',
+          desc: '成功领取直播券',
+        },
+        {
+          avatars:
+            'http://thirdwx.qlogo.cn/mmopen/vi_32/TaJVdWvc44qRNyo5LSSbN2ryicsd2oJUsovpRzLJrJl24d7ZTnaTw6oYUT6He1amK7wg87mq3JsNwcq17MGCjcg/132',
+          name: '唐',
+          desc: '成功领取直播券',
+        },
+        {
+          avatars:
+            'https://thirdwx.qlogo.cn/mmopen/vi_32/22l8aEibJoqmS6cxOib4TMo27mCiao4ibQP5TZyBsHfhxCw9CLjibmVt2Vjundu2zI3jtNehibf39ibxob0JYliaswp7cA/132',
+          name: '唐',
+          desc: '成功领取直播券',
+        },
+        {
+          avatars:
+            'http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJbE4CqHgp28Nq0uGxNQcLWuUXbdEbiaWpGkM4qe9mOcw3azbBNBVudSOG7QcQshVdQqFlqk5WhnWQ/132,http://thirdwx.qlogo.cn/mmopen/vi_32/TaJVdWvc44qRNyo5LSSbN2ryicsd2oJUsovpRzLJrJl24d7ZTnaTw6oYUT6He1amK7wg87mq3JsNwcq17MGCjcg/132,https://thirdwx.qlogo.cn/mmopen/vi_32/22l8aEibJoqmS6cxOib4TMo27mCiao4ibQP5TZyBsHfhxCw9CLjibmVt2Vjundu2zI3jtNehibf39ibxob0JYliaswp7cA/132',
+          name: '',
+          desc: '已有193人领取',
+        },
+      ]
+    }
+  },
+  methods:{
+    login() {
+      this.$refs['hdForm'].validate((valid) => {
+        if (valid) {
+          this.$confirm({
+            title: '温馨提示',
+            content: `确认要提交吗？提交后不可修改`,
+          })
+            .then(() => {
+              this.$toast('点击确定')
+            })
+            .catch(() => {
+              this.$toast('点击取消')
+            })
+        } else {
+          this.$toast('用户基本信息不能为空')
+          //alert('检验失败')
+        }
+      })
+    },
+    handlePullDown(refresh) {
+      setTimeout(() => {
+        refresh.endDownLoading(true, '成功刷新')
+      }, 600)
+    },
+    handlePullUp(refresh) {
+      refresh.endUpLoading(true)
+    }
+  },
   mounted(){
-    this.$confirm({
-      title: '博鳌天',
-      content: '获取用户信息(init方法参数说明见 混合 mixins/index)成功后添加埋点', // 可以是富文本
-      confirmBtn: '', // initValue('确定')
-      cancelBtn: '', // initValue('取消')
-    })
-    .then(() => {
-      this.$toast('点击确定')
-    })
-    .catch(() => {
-      this.$toast('点击取消')
-    })
   }
 }
 

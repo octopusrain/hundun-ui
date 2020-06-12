@@ -9,7 +9,7 @@ import postcss from 'rollup-plugin-postcss'
 export default {
   input: 'src/index.js',
   output: {
-    file: 'hd-ui.js',
+    file: 'lib/hd-ui.js',
     name: 'HUNDUNUI',
     format: 'umd',
   },

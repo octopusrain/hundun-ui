@@ -1,8 +1,8 @@
 {
   "name": "hundun-ui-dev",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "混沌弹窗组件",
-  "main": "hd-ui.js",
+  "main": "lib/hd-ui.js",
   "scripts": {
     "build": "rollup -c",
     "release": "npm run build && sh .publish.sh"
@@ -15,7 +15,7 @@
   },
   "keywords": [
     "hundun",
-    "ui",
+    "vue",
     "pullrefresh"
   ],
   "bugs": {

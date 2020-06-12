@@ -7,6 +7,8 @@ import HDFormItem from './core/HDFormItem.js'
 import HDInput from './core/HDInput.js'
 import HDSelect from './core/HDSelect.js'
 import HDFixBtn from './core/HDFixBtn.js'
+import HDMarquee from './core/HDMarquee.js'
+import HDTips from './core/HDTips.js'
 const components = [
   HDToast,
   HDConfirm,
@@ -17,6 +19,8 @@ const components = [
   HDInput,
   HDSelect,
   HDFixBtn,
+  HDMarquee,
+  HDTips,
 ]
 const install = function(Vue, opts = {}) {
   components.forEach((component) => {
@@ -44,4 +48,6 @@ export default {
   HDInput,
   HDSelect,
   HDFixBtn,
+  HDMarquee,
+  HDTips,
 }
