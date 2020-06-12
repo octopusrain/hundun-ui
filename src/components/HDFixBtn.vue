@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'HDFixButton',
+  name: 'HDFixBtn',
   props: {
     text: {
       type: String,

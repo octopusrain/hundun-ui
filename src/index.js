@@ -1,17 +1,17 @@
-import Toast from './core/toast.js'
-import Confirm from './core/confirm.js'
-import PullRefresh from './core/pullRefresh.js'
-import TextHide from './core/textHide.js'
-import HDForm from './core/hdForm.js'
-import HDFormItem from './core/hdFormItem.js'
-import HDInput from './core/hdInput.js'
-import HDSelect from './core/hdSelect.js'
-import HDFixBtn from './core/hdFixBtn.js'
+import HDToast, { toast } from './core/HDToast.js'
+import HDConfirm, { confirm } from './core/HDConfirm.js'
+import HDScrollView from './core/HDScrollView.js'
+import HDTextHide from './core/HDTextHide.js'
+import HDForm from './core/HDForm.js'
+import HDFormItem from './core/HDFormItem.js'
+import HDInput from './core/HDInput.js'
+import HDSelect from './core/HDSelect.js'
+import HDFixBtn from './core/HDFixBtn.js'
 const components = [
-  Toast,
-  Confirm,
-  PullRefresh,
-  TextHide,
+  HDToast,
+  HDConfirm,
+  HDScrollView,
+  HDTextHide,
   HDForm,
   HDFormItem,
   HDInput,
@@ -24,15 +24,21 @@ const install = function(Vue, opts = {}) {
   })
   // TODO
   // $toast,$confirm全局引用的情况
+  Vue.prototype.$toast = (props) => {
+    return toast(HDToast, props, Vue)
+  }
+  Vue.prototype.$confirm = (props) => {
+    return confirm(HDConfirm, props, Vue)
+  }
   // some theme there
   // Vue.prototype.$HUNDUNUI = {}
 }
 export default {
   install,
-  Toast,
-  Confirm,
-  PullRefresh,
-  TextHide,
+  HDToast,
+  HDConfirm,
+  HDScrollView,
+  HDTextHide,
   HDForm,
   HDFormItem,
   HDInput,

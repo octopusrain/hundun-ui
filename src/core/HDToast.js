@@ -1,23 +1,23 @@
-import Toast from '../components/Toast.vue'
+import HDToast from '../components/HDToast.vue'
 import create from '../utils/utils'
-const toast = (props, Vue) => {
+export const toast = (Comp = HDToast, props, Vue) => {
   let notice = null
   if (typeof props === 'string') {
     // 兼容用户只想传入message 字符串
-    notice = create(Toast, { message: props }, Vue)
+    notice = create(Comp, { message: props }, Vue)
   } else {
-    notice = create(Toast, props, Vue)
+    notice = create(Comp, props, Vue)
   }
   // 移除
   setTimeout(() => {
     notice.remove()
   }, props.duration || 2000)
 }
-Toast.install = function(Vue, options = {}) {
+HDToast.install = function(Vue, options = {}) {
   // add toast
   Vue.prototype.$toast = (props) => {
     return toast(props, Vue)
   }
-  Vue.component(Toast.name, Toast)
+  Vue.component(HDToast.name, HDToast)
 }
-export default Toast
+export default HDToast

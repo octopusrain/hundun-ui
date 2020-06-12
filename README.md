@@ -2,9 +2,9 @@
 
 ## usage
 
-### script 引入示例（test/index.html）
+## script 引入示例（test/index.html）
 
-引入资源
+## 引入资源
 
 ```
 
@@ -13,7 +13,7 @@
 
 ```
 
-### use
+## use
 
 ```
   Vue.use(HDConfirm.Confirm)
@@ -36,22 +36,33 @@
 
 `npm install hundun-ui -S`
 
-### use
+## use
 
-注册插件
+## 注册插件
+
+## 全局引入
 
 ```
 import Vue from 'vue'
-import HUNDUNUI,{ Toast, Confirm } from 'hundun-ui'
-Vue.use(Toast)
-Vue.use(Confirm)
+import HUNDUNUI from 'hundun-ui'
 Vue.use(HUNDUNUI)
 ```
 
-使用插件
+## 模块引入
 
 ```
-<HDScrollView @onpulldown="handlePullDown" @onpullup="handlePullUp">
+import Vue from 'vue'
+import {HDToast,HDConfirm} from 'hundun-ui
+Vue.use(HDToast)
+Vue.use(HDConfirm)
+```
+
+## 使用插件
+
+```
+<template>
+  <main>
+  <HDScrollView @onpulldown="handlePullDown" @onpullup="handlePullUp">
     <div class="info1" ref="info1">
       <p class="tit">个人基本信息</p>
       <HDForm
@@ -101,23 +112,32 @@ Vue.use(HUNDUNUI)
         </HDFormItem>
       </HDForm>
       <!-- 不生效，在scroll view中 -->
-      <HDFixButton text="登录"></HDFixButton>
+      <!-- <HDFixButton text="登录"></HDFixButton> -->
     </div>
   </HDScrollView>
   <HDFixButton text="登录"></HDFixButton>
+  </main>
+</template>
 ```
 
 ```
-this.$confirm({
-    title: '博鳌天',
-    content: '获取用户信息(init方法参数说明见 混合 mixins/index)成功后添加埋点', // 可以是富文本
-    confirmBtn: '', // initValue('确定')
-    cancelBtn: '', // initValue('取消')
-  })
-  .then(() => {
-    this.$toast('点击确定')
-  })
-  .catch(() => {
-    this.$toast('点击取消')
-  })
+<script>
+export default {
+  mounted(){
+    this.$confirm({
+      title: '博鳌天',
+      content: '获取用户信息(init方法参数说明见 混合 mixins/index)成功后添加埋点', // 可以是富文本
+      confirmBtn: '', // initValue('确定')
+      cancelBtn: '', // initValue('取消')
+    })
+    .then(() => {
+      this.$toast('点击确定')
+    })
+    .catch(() => {
+      this.$toast('点击取消')
+    })
+  }
+}
+
+</script>
 ```

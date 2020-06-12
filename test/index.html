@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <title>混沌大学</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-  <title>混沌大学</title>
-</head>
+  <body>
+    <div id="app">
+      <hd-scroll-view></hd-scroll-view>
+    </div>
+    <script src="http://yxs-web.oss-cn-beijing.aliyuncs.com/js/vue/2.5.17/runtime/vue.min.js"></script>
+    <script src="../hd-ui.js?v=53"></script>
+  </body>
+  <script>
+    // Vue.use(HUNDUNUI.HDConfirm)
+    // Vue.use(HUNDUNUI.HDToast)
+    console.log(HUNDUNUI)
+    Vue.use(HUNDUNUI)
+    var app = new Vue({
+      el: 'app',
 
-<body>
-  <div id="app">
-    <hd-scroll-view></hd-scroll-view>
-  </div>
-  <script src="http://yxs-web.oss-cn-beijing.aliyuncs.com/js/vue/2.5.17/runtime/vue.min.js"></script>
-  <script src="../hd-ui.js?v=47"></script>
-</body>
-<script>
-  Vue.use(HDConfirm.Confirm)
-  Vue.use(HDConfirm.Toast)
-  console.log(HDConfirm)
-  Vue.use(HDConfirm.PullRefresh)
-  var app = new Vue({
-    el: 'app',
-
-    mounted: function () {
-      // this.$confirm({
-      //   title: '测试',
-      //   content: 'hahhhhewiaeiewi',
-      // })
-      this.$toast('测试')
-    },
-  })
-</script>
-
+      mounted: function() {
+        this.$confirm({
+          title: '测试',
+          content: 'hahhhhewiaeiewi',
+        })
+        this.$toast('测试')
+      },
+    })
+  </script>
 </html>
