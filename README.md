@@ -9,15 +9,15 @@
 ```
 
  <script src="vue.js"></script>
- <script src="hd-confirm.js"></script>
+ <script src="hd-ui.js"></script>
 
 ```
 
 ## use
 
 ```
-  Vue.use(HDConfirm.Confirm)
-  Vue.use(HDConfirm.Toast)
+  Vue.use(HUNDUNUI.HDConfirm)
+  Vue.use(HUNDUNUI.HDToast)
   var app = new Vue({
     el: 'app',
     mounted: function() {

@@ -2,9 +2,9 @@
   "name": "hundun-ui-dev",
   "version": "1.0.8",
   "description": "混沌弹窗组件",
-  "main": "lib/hd-ui.js",
+  "main": "lib/HUNDUNUI.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rm -rf lib && rollup -c",
     "release": "npm run build && sh .publish.sh"
   },
   "author": "zhangyu@hundun.cn",

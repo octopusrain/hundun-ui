@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import 'minirefresh/dist/minirefresh.min.js'
+import minirefreshTools from 'minirefresh/dist/minirefresh.min.js'
 import 'minirefresh/dist/minirefresh.min.css'
 export default {
   name: 'HDScrollView',
