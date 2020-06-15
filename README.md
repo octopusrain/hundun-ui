@@ -6,8 +6,8 @@
 
 ### install
 
-`npm install hundun-ui -S`
-or
+`npm install hundun-ui -S` or
+
 `yarn add hundun-ui --save-dev`
 
 ## use
@@ -23,6 +23,26 @@ Vue.use(HUNDUNUI)
 ```
 
 ## 模块引入
+
+### 安装 babel-plugin-component
+
+`npm install babel-plugin-component -D`
+
+### 配置 babel plugin
+
+```
+"plugins": [
+  [
+    "component",
+    {
+      "libraryName": "hundun-ui",
+      "style": false
+    }
+  ]
+]
+```
+
+### code
 
 ```
 import Vue from 'vue'
