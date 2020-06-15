@@ -1,6 +1,6 @@
-import HDForm from '../components/HDForm.vue'
+import hdForm from '../components/hdForm.vue'
 
-HDForm.install = function(Vue, options = {}) {
-  Vue.component(HDForm.name, HDForm)
+hdForm.install = function(Vue, options = {}) {
+  Vue.component(hdForm.name, hdForm)
 }
-export default HDForm
+export default hdForm

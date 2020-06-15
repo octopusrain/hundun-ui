@@ -1,6 +1,6 @@
-import HDMarquee from '../components/HDMarquee.vue'
+import hdMarquee from '../components/hdMarquee.vue'
 
-HDMarquee.install = function(Vue, options = {}) {
-  Vue.component(HDMarquee.name, HDMarquee)
+hdMarquee.install = function(Vue, options = {}) {
+  Vue.component(hdMarquee.name, hdMarquee)
 }
-export default HDMarquee
+export default hdMarquee

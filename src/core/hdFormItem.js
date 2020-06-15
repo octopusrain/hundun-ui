@@ -1,6 +1,6 @@
-import HDFormItem from '../components/HDFormItem.vue'
+import hdFormItem from '../components/hdFormItem.vue'
 
-HDFormItem.install = function(Vue, options = {}) {
-  Vue.component(HDFormItem.name, HDFormItem)
+hdFormItem.install = function(Vue, options = {}) {
+  Vue.component(hdFormItem.name, hdFormItem)
 }
-export default HDFormItem
+export default hdFormItem

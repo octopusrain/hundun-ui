@@ -1,8 +1,8 @@
 {
   "name": "hundun-ui-dev",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "混沌弹窗组件",
-  "main": "lib/HUNDUNUI.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf lib && rollup -c",
     "release": "npm run build && sh .publish.sh"

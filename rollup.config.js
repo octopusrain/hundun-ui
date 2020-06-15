@@ -7,15 +7,20 @@ import babel from 'rollup-plugin-babel' // .js文件编译为es2015
 import commonjs from 'rollup-plugin-commonjs' // 转化为commonjs规范
 import postcss from 'rollup-plugin-postcss'
 import componentList from './components.js'
+function toLine(name, format = '-') {
+  return name.replace(/([A-Z])/g, `${format}$1`).toLowerCase()
+}
 const buildFileOptions = componentList.map((item) => {
   let inputName = `src/core/${item}.js`
+  let outName = toLine(`lib/${item}/index.js`)
   if (item === 'HUNDUNUI') {
     inputName = `src/index.js`
+    outName = `lib/index.js`
   }
   return {
     input: inputName,
     output: {
-      file: `lib/${item}.js`,
+      file: outName,
       name: item,
       format: 'umd',
       exports: 'named',

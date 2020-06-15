@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'HDFixBtn',
+  name: 'hdFixBtn',
   props: {
     bgColor: {
       type: String,

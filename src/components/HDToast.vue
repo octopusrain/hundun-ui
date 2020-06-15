@@ -1,12 +1,12 @@
 <template>
-  <div class="hd-toast">
+  <div v-if="message" class="hd-toast">
     {{ message }}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HDToast',
+  name: 'hdToast',
   props: {
     message: {
       type: String,

@@ -10,7 +10,7 @@
 import minirefreshTools from 'minirefresh/dist/minirefresh.min.js'
 import 'minirefresh/dist/minirefresh.min.css'
 export default {
-  name: 'HDScrollView',
+  name: 'hdScrollView',
   props: {
     hideScrollBar: {
       type: Boolean,

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'HDTips',
+  name: 'hdTips',
   props: {
     tips: {
       type: String,

@@ -1,6 +1,6 @@
-import HDScrollView from '../components/HDScrollView.vue'
+import hdScrollView from '../components/hdScrollView.vue'
 
-HDScrollView.install = function(Vue, options = {}) {
-  Vue.component(HDScrollView.name, HDScrollView)
+hdScrollView.install = function(Vue, options = {}) {
+  Vue.component(hdScrollView.name, hdScrollView)
 }
-export default HDScrollView
+export default hdScrollView

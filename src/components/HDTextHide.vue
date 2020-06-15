@@ -5,7 +5,7 @@
 <script>
 import { getStrLen } from '../utils/utils'
 export default {
-  name: 'HDTextHide',
+  name: 'hdTextHide',
   props: {
     // 文本
     text: {

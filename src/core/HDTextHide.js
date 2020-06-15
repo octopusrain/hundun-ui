@@ -1,6 +1,6 @@
-import HDTextHide from '../components/HDTextHide.vue'
+import hdTextHide from '../components/hdTextHide.vue'
 
-HDTextHide.install = function(Vue, options = {}) {
-  Vue.component(HDTextHide.name, HDTextHide)
+hdTextHide.install = function(Vue, options = {}) {
+  Vue.component(hdTextHide.name, hdTextHide)
 }
-export default HDTextHide
+export default hdTextHide

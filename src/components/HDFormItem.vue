@@ -10,7 +10,7 @@
 import Schema from 'async-validator'
 export default {
   inject: ['form'],
-  name: 'HDFormItem',
+  name: 'hdFormItem',
   componentName: 'HDFormItem',
   props: {
     label: {

@@ -1,6 +1,6 @@
-import HDSelect from '../components/HDSelect.vue'
+import hdSelect from '../components/hdSelect.vue'
 
-HDSelect.install = function(Vue, options = {}) {
-  Vue.component(HDSelect.name, HDSelect)
+hdSelect.install = function(Vue, options = {}) {
+  Vue.component(hdSelect.name, hdSelect)
 }
-export default HDSelect
+export default hdSelect

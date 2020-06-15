@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'HDForm',
+  name: 'hdForm',
   componentName: 'HDForm',
   provide() {
     return {

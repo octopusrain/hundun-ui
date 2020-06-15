@@ -18,7 +18,7 @@
 <script>
 import emitter from '../mixins/emitter'
 export default {
-  name: 'HDSelect',
+  name: 'hdSelect',
   model: {
     event: 'change',
   },

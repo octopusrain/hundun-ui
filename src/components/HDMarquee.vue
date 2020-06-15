@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'HDMarquee',
+  name: 'hdMarquee',
   props: {
     receiveList: {
       type: Array,

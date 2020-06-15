@@ -1,6 +1,6 @@
-import HDTips from '../components/HDTips.vue'
+import hdTips from '../components/hdTips.vue'
 
-HDTips.install = function(Vue, options = {}) {
-  Vue.component(HDTips.name, HDTips)
+hdTips.install = function(Vue, options = {}) {
+  Vue.component(hdTips.name, hdTips)
 }
-export default HDTips
+export default hdTips

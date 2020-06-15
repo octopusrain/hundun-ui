@@ -1,6 +1,6 @@
-import HDInput from '../components/HDInput.vue'
+import hdInput from '../components/hdInput.vue'
 
-HDInput.install = function(Vue, options = {}) {
-  Vue.component(HDInput.name, HDInput)
+hdInput.install = function(Vue, options = {}) {
+  Vue.component(hdInput.name, hdInput)
 }
-export default HDInput
+export default hdInput

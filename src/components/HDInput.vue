@@ -14,7 +14,7 @@
 <script>
 import emitter from '../mixins/emitter'
 export default {
-  name: 'HDInput',
+  name: 'hdInput',
   inject: ['form'],
   mixins: [emitter],
   inheritAttrs: false,

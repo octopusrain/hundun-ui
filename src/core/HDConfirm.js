@@ -1,6 +1,6 @@
-import HDConfirm from '../components/HDConfirm.vue'
+import hdConfirm from '../components/hdConfirm.vue'
 import create from '../utils/utils.js'
-export const confirm = (Comp = HDConfirm, props, Vue) => {
+export const confirm = (Comp = hdConfirm, props, Vue) => {
   return new Promise((resolve, reject) => {
     props.onconfirm = () => {
       resolve(true)
@@ -11,11 +11,11 @@ export const confirm = (Comp = HDConfirm, props, Vue) => {
     return create(Comp, props, Vue)
   })
 }
-HDConfirm.install = function(Vue, options = {}) {
+hdConfirm.install = function(Vue, options = {}) {
   // add confirm
   Vue.prototype.$confirm = (props) => {
-    return confirm(HDConfirm, props, Vue)
+    return confirm(hdConfirm, props, Vue)
   }
-  Vue.component(HDConfirm.name, HDConfirm)
+  Vue.component(hdConfirm.name, hdConfirm)
 }
-export default HDConfirm
+export default hdConfirm

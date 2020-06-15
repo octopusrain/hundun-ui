@@ -1,26 +1,26 @@
-import HDToast, { toast } from './core/HDToast.js'
-import HDConfirm, { confirm } from './core/HDConfirm.js'
-import HDScrollView from './core/HDScrollView.js'
-import HDTextHide from './core/HDTextHide.js'
-import HDForm from './core/HDForm.js'
-import HDFormItem from './core/HDFormItem.js'
-import HDInput from './core/HDInput.js'
-import HDSelect from './core/HDSelect.js'
-import HDFixBtn from './core/HDFixBtn.js'
-import HDMarquee from './core/HDMarquee.js'
-import HDTips from './core/HDTips.js'
+import hdToast, { toast } from './core/hdToast.js'
+import hdConfirm, { confirm } from './core/hdConfirm.js'
+import hdScrollView from './core/hdScrollView.js'
+import hdTextHide from './core/hdTextHide.js'
+import hdForm from './core/hdForm.js'
+import hdFormItem from './core/hdFormItem.js'
+import hdInput from './core/hdInput.js'
+import hdSelect from './core/hdSelect.js'
+import hdFixBtn from './core/hdFixBtn.js'
+import hdMarquee from './core/hdMarquee.js'
+import hdTips from './core/hdTips.js'
 const components = [
-  HDToast,
-  HDConfirm,
-  HDScrollView,
-  HDTextHide,
-  HDForm,
-  HDFormItem,
-  HDInput,
-  HDSelect,
-  HDFixBtn,
-  HDMarquee,
-  HDTips,
+  hdToast,
+  hdConfirm,
+  hdScrollView,
+  hdTextHide,
+  hdForm,
+  hdFormItem,
+  hdInput,
+  hdSelect,
+  hdFixBtn,
+  hdMarquee,
+  hdTips,
 ]
 const install = function(Vue, opts = {}) {
   components.forEach((component) => {
@@ -29,25 +29,25 @@ const install = function(Vue, opts = {}) {
   // TODO
   // $toast,$confirm全局引用的情况
   Vue.prototype.$toast = (props) => {
-    return toast(HDToast, props, Vue)
+    return toast(hdToast, props, Vue)
   }
   Vue.prototype.$confirm = (props) => {
-    return confirm(HDConfirm, props, Vue)
+    return confirm(hdConfirm, props, Vue)
   }
   // some theme there
   // Vue.prototype.$HUNDUNUI = {}
 }
 export default {
   install,
-  HDToast,
-  HDConfirm,
-  HDScrollView,
-  HDTextHide,
-  HDForm,
-  HDFormItem,
-  HDInput,
-  HDSelect,
-  HDFixBtn,
-  HDMarquee,
-  HDTips,
+  hdToast,
+  hdConfirm,
+  hdScrollView,
+  hdTextHide,
+  hdForm,
+  hdFormItem,
+  hdInput,
+  hdSelect,
+  hdFixBtn,
+  hdMarquee,
+  hdTips,
 }

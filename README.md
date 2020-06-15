@@ -34,7 +34,7 @@
 
 ### install
 
-`npm install hundun-ui -S`
+`npm install hundun-ui -S` or `yarn add hundun-ui --save-dev`
 
 ## use
 
@@ -52,9 +52,19 @@ Vue.use(HUNDUNUI)
 
 ```
 import Vue from 'vue'
-import {HDToast,HDConfirm} from 'hundun-ui
-Vue.use(HDToast)
-Vue.use(HDConfirm)
+import {hdToast,hdConfirm} from 'hundun-ui
+Vue.use(hdToast)
+Vue.use(hdConfirm)
+```
+
+## 完整组件列表和引入方式(完整组件列表以 [components.js][components] 为准)
+
+```
+import Vue from 'vue'
+import {hdToast,hdConfirm,hdScrollView,hdTextHide,hdTips,hdFixBtn,hdForm,hdFormItem,hdInput,hdSelect} from 'hundun-ui
+Vue.use(hdToast)
+Vue.use(hdConfirm)
+...
 ```
 
 ## 使用插件 示例代码
@@ -207,3 +217,5 @@ export default {
 
 </script>
 ```
+
+[components]: https://github.com/octopusrain/hundun-ui/blob/master/components.js

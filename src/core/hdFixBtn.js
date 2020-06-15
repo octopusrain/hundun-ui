@@ -1,6 +1,6 @@
-import HDFixBtn from '../components/HDFixBtn.vue'
+import hdFixBtn from '../components/hdFixBtn.vue'
 
-HDFixBtn.install = function(Vue, options = {}) {
-  Vue.component(HDFixBtn.name, HDFixBtn)
+hdFixBtn.install = function(Vue, options = {}) {
+  Vue.component(hdFixBtn.name, hdFixBtn)
 }
-export default HDFixBtn
+export default hdFixBtn
