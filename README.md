@@ -46,64 +46,64 @@ Vue.use(hdConfirm)
 ```
 <template>
   <main>
-    <HDScrollView @onpulldown="handlePullDown" @onpullup="handlePullUp">
+    <hdScrollView @onpulldown="handlePullDown" @onpullup="handlePullUp">
     <div class="info1" ref="info1">
       <p class="tit">个人基本信息</p>
-      <HDForm
+      <hdForm
         :model="data"
         :rules="rules"
         ref="hdForm"
         @on-focus="formFocus = true"
         @on-blur="formFocus = false"
       >
-        <HDFormItem label="手机号码" prop="phone">
-          <HDInput
+        <hdFormItem label="手机号码" prop="phone">
+          <hdInput
             v-model="data.phone"
             placeholder="请填写您的手机号"
             type="tel"
             disabled
           >
-          </HDInput>
-        </HDFormItem>
-        <HDFormItem label="姓名" prop="name">
-          <HDInput v-model="data.name" placeholder="请填写您的姓名" type="text">
-          </HDInput>
-        </HDFormItem>
-        <HDFormItem label="性别" prop="sex">
-          <HDSelect v-model="data.sex">
+          </hdInput>
+        </hdFormItem>
+        <hdFormItem label="姓名" prop="name">
+          <hdInput v-model="data.name" placeholder="请填写您的姓名" type="text">
+          </hdInput>
+        </hdFormItem>
+        <hdFormItem label="性别" prop="sex">
+          <hdSelect v-model="data.sex">
             <option value selected disabled style="display:none;"
               >请选择</option
             >
             <option :value="1">男</option>
             <option :value="2">女</option>
-          </HDSelect>
-        </HDFormItem>
-        <HDFormItem label="出生日期" prop="birthday">
-          <HDInput
+          </hdSelect>
+        </hdFormItem>
+        <hdFormItem label="出生日期" prop="birthday">
+          <hdInput
             v-model="data.birthday"
             placeholder="请填写您的出生日期"
             type="date"
           >
-          </HDInput>
-        </HDFormItem>
-        <HDFormItem label="微信号" prop="weixin">
-          <HDInput
+          </hdInput>
+        </hdFormItem>
+        <hdFormItem label="微信号" prop="weixin">
+          <hdInput
             v-model="data.weixin"
             placeholder="请填写您的微信"
             type="text"
           >
-          </HDInput>
-        </HDFormItem>
-      </HDForm>
+          </hdInput>
+        </hdFormItem>
+      </hdForm>
       <!-- 不生效，在scroll view中 -->
-      <!-- <HDFixButton>登录</HDFixButton> -->
+      <!-- <hdFixButton>登录</hdFixButton> -->
     </div>
-    </HDScrollView>
-    <HDFixBtn @click="login">
+    </hdScrollView>
+    <hdFixBtn @click="login">
       <p>登录</p>
-      <HDTips tips="邀请好友得颜值，上线500"></HDTips>
-    </HDFixBtn>
-    <HDMarquee :receiveList="receiveList"></HDMarquee>
+      <hdTips tips="邀请好友得颜值，上线500"></hdTips>
+    </hdFixBtn>
+    <hdMarquee :receiveList="receiveList"></hdMarquee>
   </main>
 </template>
 ```
