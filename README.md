@@ -2,39 +2,13 @@
 
 ## usage
 
-## script 引入示例（test/index.html）
-
-## 引入资源
-
-```
-
- <script src="vue.js"></script>
- <script src="hd-ui.js"></script>
-
-```
-
-## use
-
-```
-  Vue.use(HUNDUNUI.HDConfirm)
-  Vue.use(HUNDUNUI.HDToast)
-  var app = new Vue({
-    el: 'app',
-    mounted: function() {
-      this.$confirm({
-        title: '测试',
-        content: 'hahhhhewiaeiewi',
-      })
-      this.$toast('测试')
-    },
-  })
-```
-
 ## npm 模块引入示例
 
 ### install
 
-`npm install hundun-ui -S` or `yarn add hundun-ui --save-dev`
+`npm install hundun-ui -S`
+or
+`yarn add hundun-ui --save-dev`
 
 ## use
 
@@ -216,6 +190,34 @@ export default {
 }
 
 </script>
+```
+
+## script 引入示例（test/index.html）
+
+## 引入资源
+
+```
+
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+ <script src="lib/index.js"></script>
+
+```
+
+## use
+
+```
+  Vue.use(HUNDUNUI.hdConfirm)
+  Vue.use(HUNDUNUI.hdToast)
+  var app = new Vue({
+    el: 'app',
+    mounted: function() {
+      this.$confirm({
+        title: '测试',
+        content: 'hahhhhewiaeiewi',
+      })
+      this.$toast('测试')
+    },
+  })
 ```
 
 [components]: https://github.com/octopusrain/hundun-ui/blob/master/components.js
