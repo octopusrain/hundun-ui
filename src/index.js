@@ -9,6 +9,8 @@ import hdSelect from './core/hdSelect.js'
 import hdFixBtn from './core/hdFixBtn.js'
 import hdMarquee from './core/hdMarquee.js'
 import hdTips from './core/hdTips.js'
+import hdLoading, { showLoading, hideLoading } from './core/hdLoading.js'
+import hdLogin, { login } from './core/hdLogin.js'
 const components = [
   hdToast,
   hdConfirm,
@@ -21,6 +23,8 @@ const components = [
   hdFixBtn,
   hdMarquee,
   hdTips,
+  hdLoading,
+  hdLogin,
 ]
 const install = function(Vue, opts = {}) {
   components.forEach((component) => {
@@ -33,6 +37,20 @@ const install = function(Vue, opts = {}) {
   }
   Vue.prototype.$confirm = (props) => {
     return confirm(hdConfirm, props, Vue)
+  }
+  // add loading
+  Vue.prototype.$showLoading = (props) => {
+    const notice = showLoading(hdLoading, props, Vue)
+    hdLoading.notice = notice
+    return notice
+  }
+  // hide loading
+  Vue.prototype.$hideLoading = () => {
+    return hideLoading(hdLoading.notice)
+  }
+  // add login
+  Vue.prototype.$login = function(props) {
+    return login(hdLogin, props, Vue)
   }
   // some theme there
   // Vue.prototype.$HUNDUNUI = {}
@@ -50,4 +68,6 @@ export default {
   hdFixBtn,
   hdMarquee,
   hdTips,
+  hdLoading,
+  hdLogin,
 }

@@ -3,6 +3,7 @@ import hdToast from '../hdToast.vue'
 import hdTips from '../hdTips.vue'
 import hdConfirm from '../hdConfirm.vue'
 import hdFixBtn from '../hdFixBtn.vue'
+import hdLoading from '../hdLoading.vue'
 // import hdTextHide from '../hdTextHide.vue'
 // import hdForm from '../hdForm.vue'
 // import hdFormItem from '../hdFormItem.vue'
@@ -112,5 +113,17 @@ describe('hdFixBtn', () => {
       },
     })
     expect(wrapper.find('.slot').classes('slot')).toBe(true)
+  })
+})
+/**
+ * 测试hdLoading 组件
+ */
+describe('hdLoading', () => {
+  it('renders correctly with different props', () => {
+    expect(
+      getMountedComponent(hdLoading, {
+        message: 'Hello',
+      }).text()
+    ).toBe('Hello')
   })
 })

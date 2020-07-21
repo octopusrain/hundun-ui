@@ -11,4 +11,6 @@ export default [
   'hdFixBtn',
   'hdMarquee',
   'hdTips',
+  'hdLoading',
+  'hdLogin',
 ]
