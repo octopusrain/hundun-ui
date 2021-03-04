@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import {shallowMount} from '@vue/test-utils'
 import hdToast from '../hdToast.vue'
 import hdTips from '../hdTips.vue'
 import hdConfirm from '../hdConfirm.vue'
@@ -22,13 +22,13 @@ describe('hdToast', () => {
     expect(
       getMountedComponent(hdToast, {
         message: 'Hello',
-      }).text()
+      }).text(),
     ).toBe('Hello')
 
     expect(
       getMountedComponent(hdToast, {
         duration: 2500,
-      }).text()
+      }).text(),
     ).toBe('')
   })
 })
@@ -40,13 +40,13 @@ describe('hdTips', () => {
     expect(
       getMountedComponent(hdTips, {
         tips: 'Hello',
-      }).text()
+      }).text(),
     ).toBe('Hello')
 
     expect(
       getMountedComponent(hdTips, {
         tips: '2500',
-      }).text()
+      }).text(),
     ).toBe('2500')
   })
 })
@@ -60,7 +60,7 @@ describe('hdConfirm', () => {
         title: 'Hello',
       })
         .find('.hd-confirm-dialog-wrap-tit')
-        .text()
+        .text(),
     ).toBe('Hello')
 
     expect(
@@ -68,7 +68,7 @@ describe('hdConfirm', () => {
         content: 'content',
       })
         .find('.hd-confirm-dialog-wrap-content')
-        .text()
+        .text(),
     ).toBe('content')
 
     expect(
@@ -76,7 +76,7 @@ describe('hdConfirm', () => {
         confirmBtn: '确认',
       })
         .find('.hd-confirm-btn__r')
-        .text()
+        .text(),
     ).toBe('确认')
 
     expect(
@@ -84,7 +84,7 @@ describe('hdConfirm', () => {
         cancelBtn: 'cancel',
       })
         .find('.hd-confirm-btn__l')
-        .text()
+        .text(),
     ).toBe('cancel')
   })
 })
@@ -96,13 +96,13 @@ describe('hdFixBtn', () => {
     expect(
       getMountedComponent(hdFixBtn, {
         color: 'red',
-      }).attributes('style')
+      }).attributes('style'),
     ).toBe('color: red;')
 
     expect(
       getMountedComponent(hdFixBtn, {
         bgColor: 'blue',
-      }).attributes('style')
+      }).attributes('style'),
     ).toBe('background-color: blue;')
   })
 
@@ -123,7 +123,7 @@ describe('hdLoading', () => {
     expect(
       getMountedComponent(hdLoading, {
         message: 'Hello',
-      }).text()
+      }).text(),
     ).toBe('Hello')
   })
 })

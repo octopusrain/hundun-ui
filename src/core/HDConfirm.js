@@ -11,9 +11,9 @@ export const confirm = (Comp = hdConfirm, props, Vue) => {
     return create(Comp, props, Vue)
   })
 }
-hdConfirm.install = function(Vue, options = {}) {
+hdConfirm.install = function (Vue, options = {}) {
   // add confirm
-  Vue.prototype.$confirm = (props) => {
+  Vue.prototype.$confirm = props => {
     return confirm(hdConfirm, props, Vue)
   }
   Vue.component(hdConfirm.name, hdConfirm)

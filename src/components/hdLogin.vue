@@ -10,8 +10,9 @@
               v-for="(item, key) in country_list"
               :key="key"
               :value="item.country_code"
-              >{{ item.country_name + ' ' + item.country_code }}</option
             >
+              {{ item.country_name + ' ' + item.country_code }}
+            </option>
           </select>
         </div>
         <div class="phone-r">
@@ -56,7 +57,7 @@
   </div>
 </template>
 <script>
-import { getBaseEnvironment, query } from 'hundun-utils'
+import {getBaseEnvironment, query} from 'hundun-utils'
 var open_id = window.localStorage.getItem('openid')
 var envi = getBaseEnvironment()
 var pid = query('pid') || ''
@@ -64,7 +65,7 @@ var sale_channel = query('sale_channel')
 var channel_id = parseInt(
   query('channel_id') ||
     process.env.CHANNEL_ID ||
-    process.env.VUE_APP_CHANNEL_ID
+    process.env.VUE_APP_CHANNEL_ID,
 )
 var plat_type = 'h5_h5_h5'
 var USER_HOST = process.env.USER_HOST || process.env.VUE_APP_USER_HOST
@@ -135,7 +136,7 @@ export default {
       } else {
         if (
           window.confirm(
-            '若您长时间未能收到验证码短信，可通过电话方式获取，请注意接听来电。'
+            '若您长时间未能收到验证码短信，可通过电话方式获取，请注意接听来电。',
           )
         ) {
           this.get_code(1)
@@ -168,7 +169,7 @@ export default {
           .get(USER_HOST + '/get_identify_code', {
             params,
           })
-          .then((res) => {
+          .then(res => {
             let data = res
             if (data.error_no == 0) {
               this.yy_show = true
@@ -190,7 +191,7 @@ export default {
                 container: document.getElementById('cbox'),
                 appId: '0ed9c02d5d714947811986a098450f4a',
                 version: 'v1',
-                onError: function(param) {
+                onError: function (param) {
                   if (!param.code) {
                     this.toast('错误请求')
                   } else if (parseInt(param.code / 100) == 5) {
@@ -206,7 +207,7 @@ export default {
                   // 异常回调
                   this.toast('验证服务异常')
                 },
-                onSuccess: function(validInfo, close, useDefaultSuccess) {
+                onSuccess: function (validInfo, close, useDefaultSuccess) {
                   // 成功回调
                   // 验证成功默认样式
 
@@ -223,16 +224,16 @@ export default {
                     sale_channel,
                   })
                 },
-                onFail: function(code, msg, retry) {
+                onFail: function (code, msg, retry) {
                   // 失败回调
                   console.log('出错啦：' + msg + ' code: ' + code)
                   retry()
                 },
-                beforeStart: function(next) {
+                beforeStart: function (next) {
                   console.log('验证马上开始')
                   next()
                 },
-                onExit: function() {
+                onExit: function () {
                   // 退出验证 （仅限dialog模式有效）
                   console.log('退出验证')
                 },
@@ -241,7 +242,7 @@ export default {
               this.toast(data.error_msg)
             }
           })
-          .catch((err) => {
+          .catch(err => {
             reject(err)
           })
       })
@@ -283,9 +284,9 @@ export default {
                 plat_type,
                 channel_id,
                 wxpub_id,
-              })
+              }),
             )
-            .then((res) => {
+            .then(res => {
               if (res.error_no == 0) {
                 let user_info = res.data
                 window.localStorage.setItem('Sid', user_info.session.sid)
@@ -298,7 +299,7 @@ export default {
                 reject(res.error_msg)
               }
             })
-            .catch((err) => {
+            .catch(err => {
               this.toast(err)
               reject(err)
             })
@@ -316,7 +317,7 @@ export default {
               sale_channel,
               plat_type,
             })
-            .then((res) => {
+            .then(res => {
               if (res.error_no == 0) {
                 let user_info = res.data
                 window.localStorage.setItem('Sid', user_info.session.sid)
@@ -329,7 +330,7 @@ export default {
                 reject(res.error_msg)
               }
             })
-            .catch((err) => {
+            .catch(err => {
               this.toast(err)
               reject(err)
             })
@@ -342,11 +343,11 @@ export default {
     get_country() {
       return axios
         .get(USER_HOST + '/app/user_country_list')
-        .then((res) => {
+        .then(res => {
           let country_list = res.data.country_list
           this.country_list = country_list
         })
-        .catch((err) => {
+        .catch(err => {
           console.log(err)
         })
     },

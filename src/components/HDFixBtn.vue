@@ -2,7 +2,7 @@
   <div
     @click="$emit('click')"
     class="hd-fix-button"
-    :style="{ color, backgroundColor: bgColor }"
+    :style="{color, backgroundColor: bgColor}"
   >
     <slot></slot>
   </div>

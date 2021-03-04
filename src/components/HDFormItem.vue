@@ -32,9 +32,9 @@ export default {
       const rules = this.form.rules[this.prop]
       // 检验值
       const value = this.form.model[this.prop]
-      const desc = { [this.prop]: rules }
+      const desc = {[this.prop]: rules}
       const schema = new Schema(desc)
-      return schema.validate({ [this.prop]: value }, (error) => {
+      return schema.validate({[this.prop]: value}, error => {
         if (error) {
           this.errorMsg = error[0].message
         } else {

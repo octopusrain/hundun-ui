@@ -59,7 +59,7 @@ export default {
         },
       })
       var up = Object.assign(this.up, {
-        onScroll: (scrollTop) => {
+        onScroll: scrollTop => {
           this.$emit('onscroll', scrollTop)
         },
         callback: () => {

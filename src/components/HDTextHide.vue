@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { getStrLen } from '../utils/utils'
+import {getStrLen} from '../utils/utils'
 export default {
   name: 'hdTextHide',
   props: {
@@ -105,7 +105,7 @@ export default {
       this.textDesc = this.formatContent(this.text)
     }
     this.$nextTick(() => {
-      this.$refs.descIntro.addEventListener('click', (e) => {
+      this.$refs.descIntro.addEventListener('click', e => {
         if (e.target.nodeName === 'SPAN') {
           if (e.target.innerHTML === this.foldText) {
             this.textDesc = this.formatContent(this.text)

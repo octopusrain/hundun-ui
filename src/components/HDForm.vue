@@ -24,8 +24,8 @@ export default {
   methods: {
     validate(cb) {
       const tasks = this.$children
-        .filter((item) => item.prop)
-        .map((item) => item.validate())
+        .filter(item => item.prop)
+        .map(item => item.validate())
       Promise.all(tasks)
         .then(() => {
           cb(true)
@@ -36,10 +36,10 @@ export default {
     },
   },
   mounted() {
-    this.$on('focus', (e) => {
+    this.$on('focus', e => {
       this.$emit('on-focus', e.target)
     })
-    this.$on('blur', (e) => {
+    this.$on('blur', e => {
       this.$emit('on-blur', e.target)
     })
   },
